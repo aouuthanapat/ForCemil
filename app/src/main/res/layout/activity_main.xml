@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="23dp"
+        android:textColor="@color/blood1"
+        android:text="ВРЕМЯ ПРИНЯТЬ СВОЙ ВЫБОР. "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/correctChoose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blood"
+            android:onClick="onRadioButtonClicked"
+            android:textSize="16dp"
+            android:text="Я, Мурадов Джамиль Джабирович, готов продать свою душу ради 3-х папок по предмету ТП (Технологии Программирования).
+                          Обязуюсь эту папку никому не скидывать, даже своему брату, потому что этот хуесос проигнорировал создателя.
+                          А если обманешь, то человек, который тебе это скинул умрет. А мне не хотелось бы умирать." />
+
+        <RadioButton
+            android:id="@+id/wrongChoose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blood"
+            android:textSize="16dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Я, Мурадов Джамиль Джабирович, не готов продать свою душу ради 3-х папок по предмету ТП (Технологии Программирования).
+                          Не готов, потому что я хороший человек и люблю своего брата." />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="158dp"
+        android:backgroundTint="@color/blood1"
+        android:text="Принять решение"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="158dp"
+        android:textColor="@color/blood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
